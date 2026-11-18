@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LK • ELKAY | Body Hug - Look Good, Feel Good</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+body{background:#FFF9F0;color:#111}
+.top{background:#000;color:#fff;text-align:center;padding:8px;font-size:12px;letter-spacing:1px}
+.top span{color:#FFD700}
+header{background:rgba(255,255,255,.95);backdrop-filter:blur(10px);padding:12px 16px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:20;box-shadow:0 2px 15px rgba(0,0,0,.08)}
+.logo{font-size:28px;font-weight:900;letter-spacing:3px}.logo i{color:#FFB800;font-style:normal}
+header a{background:#25D366;color:#fff;padding:10px 16px;border-radius:30px;text-decoration:none;font-weight:800;font-size:13px;box-shadow:0 4px 12px rgba(37,211,102,.4)}
+.hero{background:radial-gradient(circle at 20% 20%,#FFE99A,#FFF9F0 60%),#000;color:#111;padding:24px 16px 10px;text-align:center;position:relative;overflow:hidden}
+.hero h1{font-size:42px;line-height:.95;letter-spacing:-1px}.hero h1 em{font-style:normal;color:#FF6B00}
+.hero p{color:#555;margin:12px auto;max-width:420px;line-height:1.5}
+.hero-img{display:flex;justify-content:center;gap:0;margin:18px 0 0;align-items:flex-end}
+.hug-hero{width:110px;height:145px;border-radius:14px 14px 6px 6px;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 15px 30px rgba(0,0,0,.2);position:relative;border:2px solid rgba(0,0,0,.05)}
+.hug-hero b{font-size:28px;letter-spacing:1px}.hug-hero small{font-size:7px;letter-spacing:2px}
+.hug-hero.white{background:#FFFEF8;color:#111;transform:rotate(-6deg);z-index:1}
+.hug-hero.black{background:#111;color:#fff;transform:scale(1.12);z-index:3;border:2px solid #333}
+.hug-hero.white2{background:#FFFEF8;color:#111;transform:rotate(6deg);z-index:1}
+.float{position:absolute;background:#fff;padding:7px 11px;border-radius:20px;font-size:12px;font-weight:800;box-shadow:0 5px 15px rgba(0,0,0,.15)}
+.cta-row{display:flex;gap:10px;justify-content:center;margin:18px 0 6px}
+.cta-row a{padding:15px 20px;border-radius:30px;text-decoration:none;font-weight:900;font-size:14px}
+.cta-shop{background:#000;color:#fff}.cta-wa{background:#25D366;color:#fff}
+.wrap{max-width:1050px;margin:auto;padding:18px 14px}
+.sec-title{text-align:center}.sec-title h2{font-size:26px}.sec-title p{color:#777;margin:6px 0 16px}
+.grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:760px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.card{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.08);border:1px solid #f0e8d8}
+.show{height:300px;display:flex;align-items:center;justify-content:center;position:relative}
+.show.white{background:linear-gradient(180deg,#FFFBEB,#F5EFE0)}
+.show.black{background:linear-gradient(180deg,#2A2A2A,#111)}
+.bodysuit{width:180px;height:235px;border-radius:18px;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 12px 25px rgba(0,0,0,.18)}
+.bodysuit:before{content:"";position:absolute;top:-4px;left:50%;transform:translateX(-50%);width:68px;height:20px;border-radius:0 0 30px 30px;background:inherit}
+.bodysuit:after{content:"✦ BODY HUG ✦";position:absolute;bottom:14px;font-size:8px;letter-spacing:2px;opacity:.6}
+.bodysuit.white{background:#FFFEF9;color:#111;border:2px solid #E8E0C8}
+.bodysuit.black{background:#0F0F0F;color:#fff;border:2px solid #333}
+.bodysuit b{font-size:46px;letter-spacing:2px}.bodysuit span{font-size:9px;letter-spacing:3px}.bodysuit i{font-style:normal;font-size:10px;margin-top:10px;background:#FFD700;color:#000;padding:4px 8px;border-radius:20px;font-weight:800}
+.badge{position:absolute;top:12px;left:12px;background:#FFD700;padding:6px 10px;border-radius:20px;font-size:11px;font-weight:900}
+.badge2{position:absolute;top:12px;right:12px;background:#FF3B30;color:#fff;padding:6px 10px;border-radius:20px;font-size:11px;font-weight:900}
+.info{padding:16px;text-align:center}
+.info h3{font-size:18px}.info p{color:#777;font-size:13px;margin:6px 0}
+.stars{color:#FFB800;font-size:14px}
+.price{font-size:24px;font-weight:900;margin:8px 0}.price s{font-size:13px;color:#aaa}
+.btns{display:flex;gap:8px}.btns button,.btns a{flex:1;padding:13px;border-radius:14px;border:none;font-weight:800;cursor:pointer;text-decoration:none;font-size:14px}
+.view{background:#111;color:#fff}.order{background:#25D366;color:#fff;text-align:center}
+.price-box{background:#111;color:#fff;border-radius:22px;padding:20px;margin-top:22px}
+.price-box h3{text-align:center;color:#FFD700;margin-bottom:12px}
+.row{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px dashed #333}
+.row b{color:#FFD700}
+.combo{background:linear-gradient(135deg,#FF6B00,#FFB800);border-radius:22px;padding:20px;color:#fff;margin-top:16px}
+.combo h3{font-size:20px}.combo p{line-height:1.7;margin:10px 0}
+.combo a{display:block;background:#000;color:#fff;text-align:center;padding:15px;border-radius:14px;text-decoration:none;font-weight:900;margin-top:12px}
+.why{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:18px;text-align:center}
+.why div{background:#fff;padding:14px 8px;border-radius:16px;box-shadow:0 4px 12px rgba(0,0,0,.06)} .why b{font-size:20px} .why p{font-size:12px;color:#666;margin-top:4px}
+.socials{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.socials a{padding:12px 18px;border-radius:30px;text-decoration:none;font-weight:800;font-size:14px}
+.wa{background:#25D366;color:#fff}.snap{background:#FFFC00;color:#000}.tik{background:#000;color:#fff}
+footer{background:#000;color:#fff;text-align:center;padding:28px 16px;margin-top:22px;border-radius:24px 24px 0 0}
+footer h3{font-size:26px;letter-spacing:3px} footer a{color:#FFD700}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:99;align-items:flex-end;justify-content:center}
+.modal.open{display:flex}
+.sheet{background:#fff;width:100%;max-width:520px;border-radius:26px 26px 0 0;padding:22px;padding-bottom:30px;max-height:92vh;overflow:auto}
+.sheet h2{font-size:24px} .sheet p{color:#555;line-height:1.6;margin:10px 0}
+.opt{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+.opt button{padding:14px;border-radius:14px;border:2px solid #eee;background:#FFF9F0;font-weight:800;cursor:pointer}
+.opt button.active{border-color:#000;background:#000;color:#fff}
+.bigwa{display:block;background:#25D366;color:#fff;text-align:center;padding:16px;border-radius:16px;text-decoration:none;font-weight:900;font-size:16px}
+.close{float:right;background:#f0f0f0;border:none;width:34px;height:34px;border-radius:50%;font-size:20px;cursor:pointer}
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:#000;color:#fff;padding:12px 20px;border-radius:30px;display:none;z-index:120;font-weight:700}
+</style>
+</head>
+<body>
+<div class="top">🚚 FAST DELIVERY NATIONWIDE <span>• LAGOS • ABUJA • PH •</span></div>
+<header><div class="logo">LK<i>.</i></div><a href="https://wa.link/64ipf2">💬 Chat Us</a></header>
+
+<div class="hero">
+<p style="font-weight:800;letter-spacing:2px;font-size:11px;color:#FF6B00">✦ ELKAY • NEW DROP ✦</p>
+<h1>HELLO! 😊<br>BODY HUG<br><em>THAT HUG YOU</em><br>BACK.</h1>
+<p>Our Body Hugs are available in <b>Black and Off-White.</b> Simple, classy, and made to hug your curves perfectly.</p>
+<div class="hero-img">
+<div class="hug-hero white"><b>LK</b><small>ELKAY</small></div>
+<div class="hug-hero black"><b>LK</b><small>ELKAY</small><span style="font-size:9px;margin-top:6px;background:#FFD700;color:#000;padding:3px 7px;border-radius:10px;font-weight:800">BEST SELLER</span></div>
+<div class="hug-hero white2"><b>LK</b><small>ELKAY</small></div>
+</div>
+<div class="float" style="top:110px;left:10px">🤍 Off-White</div>
+<div class="float" style="top:140px;right:10px">🖤 Black</div>
+<div class="cta-row"><a class="cta-shop" href="#shop">🛍️ SHOP NOW</a><a class="cta-wa" href="https://wa.me/2348147047560">WhatsApp →</a></div>
+<p style="font-size:12px;color:#888">⭐ 4.9 • 500+ Happy Customers • ❤️ Loved by girls</p>
+</div>
+
+<div class="wrap" id="shop">
+<div class="sec-title"><h2>Shop The Body Hug 🔥</h2><p>2 White • 1 Black • All Short Sleeve with LK on it • HD Quality</p></div>
+<div class="grid">
+<div class="card"><div class="show white"><span class="badge">🤍 OFF-WHITE</span><span class="badge2">NEW</span><div class="bodysuit white"><b>LK</b><span>ELKAY • BODY HUG</span><i>SHORT SLEEVE</i></div></div>
+<div class="info"><h3>Off-White Short Sleeve</h3><p>Soft, Stretchy, Breathable</p><div class="stars">★★★★★ (128)</div><div class="price">₦12,000 <s>₦15,000</s></div><div class="btns"><button class="view" onclick="openP('Off-White Short Sleeve','₦12,000')">View Details →</button><a class="order" href="https://wa.me/2348147047560?text=Hello!%20😊%20I%20want%20Off-White%20Short%20Sleeve%20Body%20Hug%20₦12,000">Order</a></div></div></div>
+
+<div class="card"><div class="show black"><span class="badge">🖤 BLACK</span><span class="badge2">HOT 🔥</span><div class="bodysuit black"><b>LK</b><span>ELKAY • BODY HUG</span><i>SHORT SLEEVE</i></div></div>
+<div class="info"><h3>Black Short Sleeve</h3><p>Bold, Sleek, Everybody's Fave</p><div class="stars">★★★★★ (214)</div><div class="price">₦12,000 <s>₦15,000</s></div><div class="btns"><button class="view" onclick="openP('Black Short Sleeve','₦12,000')">View Details →</button><a class="order" href="https://wa.me/2348147047560?text=Hello!%20😊%20I%20want%20Black%20Short%20Sleeve%20Body%20Hug%20₦12,000">Order</a></div></div></div>
+
+<div class="card"><div class="show white"><span class="badge">🤍 OFF-WHITE</span><span class="badge2">LONG</span><div class="bodysuit white"><b>LK</b><span>ELKAY • BODY HUG</span><i>LONG SLEEVE</i></div></div>
+<div class="info"><h3>Off-White Long Sleeve</h3><p>Classy, Full Coverage, Pr
